@@ -27,21 +27,362 @@ public class GuiasTuristicos extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        lblRutGuia = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        txtRutGuia = new javax.swing.JTextPane();
+        lblNom = new javax.swing.JLabel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        txtNombreGuia = new javax.swing.JTextPane();
+        lblFono = new javax.swing.JLabel();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        txtFonoGuia = new javax.swing.JTextPane();
+        btnAgregar = new javax.swing.JButton();
+        btnModificar = new javax.swing.JButton();
+        btnEliminar = new javax.swing.JButton();
+        btnSalir = new javax.swing.JButton();
+        btnAceptar = new javax.swing.JButton();
+        btnCancelar = new javax.swing.JButton();
+        lblBuscar = new javax.swing.JLabel();
+        txtBuscar = new javax.swing.JTextField();
+        jScrollPane7 = new javax.swing.JScrollPane();
+        tbTabla = new javax.swing.JTable();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        lblRutGuia.setFont(new java.awt.Font("Myriad Pro", 1, 14)); // NOI18N
+        lblRutGuia.setForeground(new java.awt.Color(51, 153, 255));
+        lblRutGuia.setText("Rut Guia");
+
+        jScrollPane2.setViewportView(txtRutGuia);
+
+        lblNom.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        lblNom.setForeground(new java.awt.Color(51, 153, 255));
+        lblNom.setText("Nombre");
+
+        jScrollPane4.setViewportView(txtNombreGuia);
+
+        lblFono.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        lblFono.setForeground(new java.awt.Color(51, 153, 255));
+        lblFono.setText("Fono");
+
+        jScrollPane5.setViewportView(txtFonoGuia);
+
+        btnAgregar.setText("AGREGAR");
+        btnAgregar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAgregarActionPerformed(evt);
+            }
+        });
+
+        btnModificar.setText("MODIFICAR");
+        btnModificar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnModificarMouseClicked(evt);
+            }
+        });
+        btnModificar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnModificarActionPerformed(evt);
+            }
+        });
+
+        btnEliminar.setText("ELIMINAR");
+        btnEliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEliminarActionPerformed(evt);
+            }
+        });
+
+        btnSalir.setText("Salir");
+        btnSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSalirActionPerformed(evt);
+            }
+        });
+
+        btnAceptar.setText("Aceptar");
+        btnAceptar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAceptarActionPerformed(evt);
+            }
+        });
+
+        btnCancelar.setText("Cancelar");
+        btnCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelarActionPerformed(evt);
+            }
+        });
+
+        lblBuscar.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        lblBuscar.setForeground(new java.awt.Color(51, 153, 255));
+        lblBuscar.setText("Ingrese ID a buscar:");
+
+        txtBuscar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtBuscarActionPerformed(evt);
+            }
+        });
+        txtBuscar.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txtBuscarKeyPressed(evt);
+            }
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtBuscarKeyReleased(evt);
+            }
+        });
+
+        tbTabla.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        tbTabla.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tbTablaMouseClicked(evt);
+            }
+        });
+        jScrollPane7.setViewportView(tbTabla);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblRutGuia)
+                .addContainerGap(859, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(lblNom)
+                                        .addComponent(lblFono))
+                                    .addGap(46, 46, 46)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 291, Short.MAX_VALUE)
+                                        .addComponent(jScrollPane5)))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGap(93, 93, 93)
+                                    .addComponent(jScrollPane2)))
+                            .addGap(0, 0, Short.MAX_VALUE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(btnAgregar)
+                            .addGap(29, 29, 29)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(btnAceptar, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(btnCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(92, 92, 92))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(btnModificar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(btnEliminar)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 508, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(lblBuscar)
+                            .addGap(45, 45, 45)
+                            .addComponent(txtBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addContainerGap()))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(107, 107, 107)
+                .addComponent(lblRutGuia, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(363, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(53, 53, 53)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(57, 57, 57)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(18, 18, 18)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(lblNom, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGap(18, 18, 18)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(lblFono, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGap(134, 134, 134)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(btnAgregar)
+                                .addComponent(btnModificar)
+                                .addComponent(btnEliminar)
+                                .addComponent(btnSalir)))
+                        .addComponent(jScrollPane7, javax.swing.GroupLayout.DEFAULT_SIZE, 324, Short.MAX_VALUE))
+                    .addGap(39, 39, 39)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblBuscar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnAceptar)
+                            .addComponent(btnCancelar)))
+                    .addGap(54, 54, 54)))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarActionPerformed
+        txtRutGuia.setEnabled(true);
+        txtNombreGuia.setEnabled(true);
+        txtFonoGuia.setEnabled(true);
+        btnAceptar.setVisible(true);
+        btnCancelar.setVisible(true);
+        btnAgregar.setVisible(true);
+        btnModificar.setEnabled(false);
+        btnEliminar.setEnabled(false);
+        btnSalir.setEnabled(false);
+    
+    }//GEN-LAST:event_btnAgregarActionPerformed
+
+    private void btnModificarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnModificarMouseClicked
+        txtNombreGuia.setEnabled(true);
+        txtFonoGuia.setEnabled(true);
+        btnAgregar.setEnabled(false);
+        btnEliminar.setEnabled(false);
+        btnSalir.setEnabled(false);
+        btnAceptar.setVisible(true);
+        btnCancelar.setVisible(true);
+        btnModificar.setEnabled(true);
+        txtRutGuia.setEnabled(false);
+    }//GEN-LAST:event_btnModificarMouseClicked
+
+    private void btnModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarActionPerformed
+
+    }//GEN-LAST:event_btnModificarActionPerformed
+
+    private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
+        int r = JOptionPane.showConfirmDialog(null,"Seguro que desea eliminar?","Eliminar",JOptionPane.YES_NO_OPTION );
+        if(r == 0){
+            PreparedStatement pst,pstP;
+            try {
+                pst = cn.prepareStatement("DELETE FROM tGuia WHERE rut_guia='"+txtRutGuia.getText()+"'");
+                pstP = cn.prepareStatement("DELETE FROM tGuia WHERE rut_guia='"+txtRutGuia.getText()+"'");
+
+                pst.executeUpdate();
+                pstP.executeUpdate();
+                CargarTabla("");
+            } catch (SQLException ex) {
+                Logger.getLogger(Cliente.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
+        }
+
+    }//GEN-LAST:event_btnEliminarActionPerformed
+
+    private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
+        Principal P = new Principal();
+        P.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnSalirActionPerformed
+
+    private void btnAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAceptarActionPerformed
+
+        PreparedStatement pst,pstP;
+        if (btnAgregar.isEnabled()){
+            try {
+                pst = cn.prepareStatement("INSERT INTO tGuia(idCliente,nomCliente,fonoCliente,mailCliente) VALUES(?,?,?,?)");
+                pst.setString(1,txtRutGuia.getText());
+                pst.setString(2,txtNombreGuia.getText());
+                pst.setInt(3,Integer.parseInt(txtFonoGuia.getText()));
+                pst.setString(4,txtMail.getText());
+                pst.executeUpdate();
+                CargarTabla("");
+
+                JOptionPane.showMessageDialog(null,"Datos Ingresados Correctamente","Correcto", JOptionPane.INFORMATION_MESSAGE);
+            } catch (SQLException ex) {
+                JOptionPane.showMessageDialog(null,"Datos Incorrectos" + " " + ex,"ERROR", JOptionPane.ERROR_MESSAGE);
+            }
+        }if (btnModificar.isEnabled() ){
+            try {
+                pst = cn.prepareStatement("UPDATE tCliente SET nomCliente='"+txtNombreGuia.getText()+"',fonoCliente='"+txtFonoGuia.getText()+"',mailCliente='"+txtMail.getText()+"' WHERE idCliente='"+txtRutGuia.getText()+"'");
+                pst.executeUpdate();
+
+                pstP = cn.prepareStatement("UPDATE tPago SET totalPago= '"+Integer.parseInt(txtTotal.getText())+"' WHERE idCliente='"+txtRutGuia.getText()+"'");
+                pstP.executeUpdate();
+                CargarTabla("");
+                JOptionPane.showMessageDialog(null,"Datos Modificados Correctamente","Correcto", JOptionPane.INFORMATION_MESSAGE);
+            } catch (SQLException ex) {
+                Logger.getLogger(Cliente.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        btnEliminar.setEnabled(true);
+        btnSalir.setEnabled(true);
+        btnAceptar.setVisible(false);
+        btnCancelar.setVisible(false);
+        btnAgregar.setEnabled(true);
+        btnModificar.setEnabled(true);
+        btnEliminar.setEnabled(true);
+        
+
+        txtRutGuia.setEnabled(false);
+        txtNombreGuia.setEnabled(false);
+        txtFonoGuia.setEnabled(false);
+        
+    }//GEN-LAST:event_btnAceptarActionPerformed
+
+    private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
+        btnEliminar.setEnabled(true);
+        btnSalir.setEnabled(true);
+        btnAceptar.setVisible(false);
+        btnCancelar.setVisible(false);
+        btnAgregar.setEnabled(true);
+        btnModificar.setEnabled(true);
+        btnEliminar.setEnabled(true);
+       
+
+        txtRutGuia.setEnabled(false);
+        txtNombreGuia.setEnabled(false);
+        txtFonoGuia.setEnabled(false);
+        
+    }//GEN-LAST:event_btnCancelarActionPerformed
+
+    private void txtBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBuscarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtBuscarActionPerformed
+
+    private void txtBuscarKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtBuscarKeyPressed
+
+    }//GEN-LAST:event_txtBuscarKeyPressed
+
+    private void txtBuscarKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtBuscarKeyReleased
+        CargarTabla(txtBuscar.getText());
+
+    }//GEN-LAST:event_txtBuscarKeyReleased
+
+    private void tbTablaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tbTablaMouseClicked
+        int fil = tbTabla.getSelectedRow();
+
+        if(fil >=0){
+
+            txtRutGuia.setText(tbTabla.getValueAt(fil, 0).toString());
+
+            txtNombreGuia.setText(tbTabla.getValueAt(fil, 1).toString());
+            txtFonoGuia.setText(tbTabla.getValueAt(fil, 2).toString());
+            
+
+        }
+    }//GEN-LAST:event_tbTablaMouseClicked
 
     /**
      * @param args the command line arguments
@@ -79,5 +420,24 @@ public class GuiasTuristicos extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAceptar;
+    private javax.swing.JButton btnAgregar;
+    private javax.swing.JButton btnCancelar;
+    private javax.swing.JButton btnEliminar;
+    private javax.swing.JButton btnModificar;
+    private javax.swing.JButton btnSalir;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane7;
+    private javax.swing.JLabel lblBuscar;
+    private javax.swing.JLabel lblFono;
+    private javax.swing.JLabel lblNom;
+    private javax.swing.JLabel lblRutGuia;
+    private javax.swing.JTable tbTabla;
+    private javax.swing.JTextField txtBuscar;
+    private javax.swing.JTextPane txtFonoGuia;
+    private javax.swing.JTextPane txtNombreGuia;
+    private javax.swing.JTextPane txtRutGuia;
     // End of variables declaration//GEN-END:variables
 }
